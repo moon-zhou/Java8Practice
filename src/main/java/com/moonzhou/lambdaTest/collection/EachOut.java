@@ -8,6 +8,11 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * 
+ * @author moon-zhou
+ *
+ */
 public class EachOut {
     
     List<String> features = new ArrayList<String>();
@@ -41,6 +46,11 @@ public class EachOut {
         // 使用Java 8的方法引用更方便，方法引用由::双冒号操作符标示，
         // 看起来像C++的作用域解析运算符
         features.forEach(System.out::println);
+        
+        /**
+         * 列表循环的最后一个例子展示了如何在Java 8中使用方法引用（method reference）。
+         * 你可以看到C++里面的双冒号、范围解析操作符现在在Java 8中用来表示方法引用。
+         */
     }
 
 }
