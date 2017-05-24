@@ -1,4 +1,4 @@
-package com.moonzhou.lambdaTest.map;
+package com.moonzhou.lambdaTest.collection;
 
 import java.util.Arrays;
 import java.util.List;
