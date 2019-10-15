@@ -1,11 +1,11 @@
 package com.moonzhou.lambdaTest.collection;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import org.junit.Test;
 
 /**
  * 
