@@ -1,5 +1,7 @@
 package com.moonzhou.lambdaTest.collection;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +21,8 @@ public class ListObjectSimple {
         testLamdbaObjReference();
 
         testForeachBreak();
+
+        objList2String();
     }
 
     private static void testNormalForReference() {
@@ -59,6 +63,14 @@ public class ListObjectSimple {
         });
 
         System.out.println(users);
+    }
+
+    private static void objList2String() {
+        List<User> users = initData();
+
+        System.out.println(JSONObject.toJSONString(users));
+        System.out.println(JSONObject.toJSONString(null));
+
     }
 
     private static List<User> initData() {
