@@ -21,7 +21,8 @@ public class StreamStepUsingDemo {
     public static void main(String[] args) {
 
 
-        streamOperato();
+//        streamOperato();
+        streamFinalOperato();
     }
 
     /**
