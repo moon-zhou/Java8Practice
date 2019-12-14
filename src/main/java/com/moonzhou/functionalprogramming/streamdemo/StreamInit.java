@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 /**
  * Stream各种初始化方法
  *
- * @author 17080118
+ * @author moon zhou
  * @Date: 2019/11/4 23:19
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
