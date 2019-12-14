@@ -1,6 +1,7 @@
 package com.moonzhou.actualcase.removeif;
 
 import com.moonzhou.actualcase.removeif.Strategy.firstversion.*;
+import com.moonzhou.actualcase.removeif.Strategy.secondversion.StrategyFactory;
 
 /**
  * if-else<br>
@@ -75,5 +76,27 @@ public class DiscountDemo {
         }
 
         return discountStrategy.discount(money);
+    }
+
+
+    /**
+     * 通过Stream + 策略模式，简化业务主逻辑的if
+     * @param money
+     * @param userType
+     * @return
+     */
+    public static double getDiscountPriceByStreamStrategy(double money, String userType) {
+
+        if (money < 1000) {
+            return money;
+        }
+
+        com.moonzhou.actualcase.removeif.Strategy.secondversion.DiscountStrategy strategy = StrategyFactory.getInstance().get(userType);
+
+        if (strategy == null){
+            throw new IllegalArgumentException("please input right type");
+        }
+
+        return strategy.discount(money);
     }
 }

@@ -29,4 +29,13 @@ public class DiscountTest {
         System.out.println(DiscountDemo.getDiscountPriceByIfStrategy(money, UserType.GOLD_VIP.getCode()));
         System.out.println(DiscountDemo.getDiscountPriceByIfStrategy(money, UserType.PLATINUM_VIP.getCode()));
     }
+
+    @Test
+    public void testStreamStrategy() {
+        double money = 8888;
+        System.out.println(DiscountDemo.getDiscountPriceByStreamStrategy(money, UserType.NORMAL.getCode()));
+        System.out.println(DiscountDemo.getDiscountPriceByStreamStrategy(money, UserType.SILVER_VIP.getCode()));
+        System.out.println(DiscountDemo.getDiscountPriceByStreamStrategy(money, UserType.GOLD_VIP.getCode()));
+        System.out.println(DiscountDemo.getDiscountPriceByStreamStrategy(money, UserType.PLATINUM_VIP.getCode()));
+    }
 }
