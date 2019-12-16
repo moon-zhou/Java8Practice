@@ -15,27 +15,36 @@ public class DiscountTest {
     @Test
     public void testIf() {
         double money = 8888;
-        System.out.println(DiscountContext.getDiscountPriceByIf(money, UserType.NORMAL.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByIf(money, UserType.SILVER_VIP.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByIf(money, UserType.GOLD_VIP.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByIf(money, UserType.PLATINUM_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIf(money, UserType.NORMAL.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIf(money, UserType.SILVER_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIf(money, UserType.GOLD_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIf(money, UserType.PLATINUM_VIP.getCode()));
     }
 
     @Test
     public void testIfStrategy() {
         double money = 8888;
-        System.out.println(DiscountContext.getDiscountPriceByIfStrategy(money, UserType.NORMAL.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByIfStrategy(money, UserType.SILVER_VIP.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByIfStrategy(money, UserType.GOLD_VIP.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByIfStrategy(money, UserType.PLATINUM_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategy(money, UserType.NORMAL.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategy(money, UserType.SILVER_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategy(money, UserType.GOLD_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategy(money, UserType.PLATINUM_VIP.getCode()));
+    }
+
+    @Test
+    public void testIfStrategyInContext() {
+        double money = 8888;
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategyInContext(money, UserType.NORMAL.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategyInContext(money, UserType.SILVER_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategyInContext(money, UserType.GOLD_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByIfStrategyInContext(money, UserType.PLATINUM_VIP.getCode()));
     }
 
     @Test
     public void testStreamStrategy() {
         double money = 8888;
-        System.out.println(DiscountContext.getDiscountPriceByStreamStrategy(money, UserType.NORMAL.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByStreamStrategy(money, UserType.SILVER_VIP.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByStreamStrategy(money, UserType.GOLD_VIP.getCode()));
-        System.out.println(DiscountContext.getDiscountPriceByStreamStrategy(money, UserType.PLATINUM_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByStreamStrategy(money, UserType.NORMAL.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByStreamStrategy(money, UserType.SILVER_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByStreamStrategy(money, UserType.GOLD_VIP.getCode()));
+        System.out.println(DiscountBizScene.getDiscountPriceByStreamStrategy(money, UserType.PLATINUM_VIP.getCode()));
     }
 }

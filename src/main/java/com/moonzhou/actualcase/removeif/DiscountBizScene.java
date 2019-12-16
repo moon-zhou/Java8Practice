@@ -11,7 +11,7 @@ import com.moonzhou.actualcase.removeif.Strategy.secondversion.StrategyFactory;
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
-public class DiscountContext {
+public class DiscountBizScene {
     /**
      * 通过if直接进行计算
      * @param money
@@ -76,6 +76,39 @@ public class DiscountContext {
         }
 
         return discountStrategy.discount(money);
+    }
+
+    /**
+     * 抽象具体优惠方法到策略接口里
+     * @param money
+     * @param userType
+     * @return
+     */
+    public static double getDiscountPriceByIfStrategyInContext(double money, String userType) {
+        if (money < 1000) {
+            return money;
+        }
+
+        DiscountContext discountContext = null;
+
+        if (money >= 1000) {
+
+            if (UserType.SILVER_VIP.getCode().equals(userType)) {
+
+                discountContext = new DiscountContext(new SilverStrategy());
+            } else if (UserType.GOLD_VIP.getCode().equals(userType)) {
+
+                discountContext = new DiscountContext(new GoldStrategy());
+            } else if (UserType.PLATINUM_VIP.getCode().equals(userType)) {
+
+                discountContext = new DiscountContext(new PlatinumStrategy());
+            } else {
+
+                discountContext = new DiscountContext(new OrdinaryStrategy());
+            }
+        }
+
+        return discountContext.getResult(money);
     }
 
 
