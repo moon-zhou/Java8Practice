@@ -4,14 +4,14 @@ import com.moonzhou.actualcase.removeif.Strategy.firstversion.*;
 import com.moonzhou.actualcase.removeif.Strategy.secondversion.StrategyFactory;
 
 /**
- * if-else<br>
+ * 策略封装的上下文<br>
  *
  * @author moon zhou
  * @Date: 2019/12/14 17:24
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
-public class DiscountDemo {
+public class DiscountContext {
     /**
      * 通过if直接进行计算
      * @param money
