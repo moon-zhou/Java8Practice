@@ -20,7 +20,11 @@ public class FilterStreamDemo {
         list.add("王力宏");
         list.add("陶喆");
         list.add("林俊杰");
+
+        // filter() 方法接收的是一个 Predicate（Java 8 新增的一个函数式接口，接受一个输入参数返回一个布尔值结果）类型的参数
         Stream<String> stream = list.stream().filter(element -> element.contains("周"));
+
+        // forEach() 方法接收的是一个 Consumer（Java 8 新增的一个函数式接口，接受一个输入参数并且无返回的操作）类型的参数，类名 :: 方法名是 Java 8 引入的新语法
         stream.forEach(System.out::println);
     }
 }
