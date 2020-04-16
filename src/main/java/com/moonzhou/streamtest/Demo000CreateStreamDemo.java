@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
-public class CreateStreamDemo {
+public class Demo000CreateStreamDemo {
     public static void main(String[] args) {
         String[] arr = new String[]{"武汉加油", "中国加油", "世界加油"};
 

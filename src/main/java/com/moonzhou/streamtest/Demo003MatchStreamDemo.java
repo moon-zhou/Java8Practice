@@ -13,7 +13,7 @@ import java.util.List;
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
-public class MatchStreamDemo {
+public class Demo003MatchStreamDemo {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("周杰伦");
